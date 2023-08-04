@@ -134,6 +134,166 @@
       ],
       "correctOption": 3,
       "points": 20
+    },
+    {
+      "question": "What is Redux commonly used for in a React application?",
+      "options": ["Styling", "Testing", "State Management", "Animation"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What does the `useMemo` hook do?",
+      "options": [
+        "Forces a re-render",
+        "Memorizes a calculated value",
+        "Merges old and new state",
+        "Sends an API request"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "What is Context in React?",
+      "options": [
+        "A global state",
+        "An error message",
+        "A type of prop",
+        "A development tool"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What can `useReducer` be used for?",
+      "options": [
+        "Complex state logic",
+        "API requests",
+        "Data validation",
+        "Managing cookies"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What's the benefit of using React's Fragment?",
+      "options": [
+        "Speeds up rendering",
+        "Fixes all errors",
+        "Prevents extra nodes in the DOM",
+        "Automatically adjusts styling"
+      ],
+      "correctOption": 2,
+      "points": 15
+    },
+    {
+      "question": "How can you handle side-effects in a Redux store?",
+      "options": [
+        "useEffect",
+        "useReducer",
+        "Middleware like Thunk or Saga",
+        "useMemo"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "What is the virtual DOM in React?",
+      "options": [
+        "A physical copy of the DOM",
+        "A tool for debugging",
+        "A memory representation of the actual DOM",
+        "A library for animations"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "How do you create a functional component in React?",
+      "options": [
+        "Using `createClass` method",
+        "Using a class",
+        "Using a JavaScript function",
+        "Using CSS"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which command can be used to create a new React application?",
+      "options": [
+        "react new",
+        "npm create-react",
+        "create-react-app",
+        "new react-app"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What are the lifecycle methods in a class component?",
+      "options": [
+        "componentDidMount, componentDidUpdate, componentWillUnmount",
+        "mountComponent, updateComponent, unmountComponent",
+        "render, constructor, componentDidMount",
+        "lifecycleStart, lifecycleUpdate, lifecycleEnd"
+      ],
+      "correctOption": 0,
+      "points": 15
+    },
+    {
+      "question": "How to share state between sibling components?",
+      "options": [
+        "Use a global variable",
+        "Store state in a parent component",
+        "Use cookies",
+        "State cannot be shared between siblings"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What does `shouldComponentUpdate` do?",
+      "options": [
+        "Always triggers an update",
+        "Stops all updates",
+        "Allows control over component updates",
+        "Updates the component without any condition"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "What does the `children` prop allow you to do?",
+      "options": [
+        "Define default content",
+        "Set the height and width of children components",
+        "Render the content inside a component",
+        "Change the color of children components"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is the purpose of the `key` prop in a list?",
+      "options": [
+        "To make the list look nice",
+        "To improve rendering performance",
+        "To sort the list",
+        "To style the list"
+      ],
+      "correctOption": 1,
+      "points": 15
+    },
+    {
+      "question": "What is a Higher-Order Component (HOC) in React?",
+      "options": [
+        "A component that returns another component",
+        "A component with a higher z-index",
+        "The main component in an application",
+        "A component that handles errors"
+      ],
+      "correctOption": 0,
+      "points": 20
     }
   ],
   "javascript": [
