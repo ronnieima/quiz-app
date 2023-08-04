@@ -23,7 +23,9 @@ const initialState = {
   points: 0,
   highscore: 0,
   secondsRemaining: null,
+  questionAmount: null,
   quizTopic: "React",
+  activeQuestions: [],
 };
 
 function reducer(state, action) {
@@ -32,6 +34,7 @@ function reducer(state, action) {
       return {
         ...state,
         questions: action.payload,
+        questionAmount: action.payload.length,
         status: "ready",
       };
     case "dataFailed":
@@ -43,6 +46,7 @@ function reducer(state, action) {
       return {
         ...state,
         status: "active",
+        activeQuestions: state.questions.slice(0, state.questionAmount),
         secondsRemaining: state.questions.length * SECONDS_PER_QUESTION,
       };
     case "newAnswer":
@@ -74,6 +78,8 @@ function reducer(state, action) {
         status: "ready",
         questions: state.questions,
         highscore: state.highscore,
+        quizTopic: state.quizTopic,
+        questionAmount: state.questionAmount,
       };
     case "tick":
       return {
@@ -96,6 +102,11 @@ function reducer(state, action) {
         ...state,
         quizTopic: action.payload,
       };
+    case "updateQuestionAmount":
+      return {
+        ...state,
+        questionAmount: Number(action.payload),
+      };
     default:
       throw new Error("Action unknown");
   }
@@ -112,12 +123,14 @@ export default function App() {
       highscore,
       secondsRemaining,
       quizTopic,
+      questionAmount,
+      activeQuestions,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
 
-  const numQuestions = questions.length;
-  const maxPossiblePoints = questions.reduce((total, question) => {
+  const numQuestions = activeQuestions.length;
+  const maxPossiblePoints = activeQuestions.reduce((total, question) => {
     return total + question.points;
   }, 0);
 
@@ -126,6 +139,7 @@ export default function App() {
       fetch(`http://localhost:9000/${quizTopic.toLowerCase()}`)
         .then((res) => res.json())
         .then((data) => dispatch({ type: "dataReceived", payload: data }))
+
         .catch((err) => dispatch({ type: "dataFailed" }));
     },
     [quizTopic]
@@ -140,7 +154,8 @@ export default function App() {
         {status === "error" && <Error />}
         {status === "ready" && (
           <StartScreen
-            numQuestions={numQuestions}
+            questionAmount={questionAmount}
+            questions={questions}
             dispatch={dispatch}
             quizTopic={quizTopic}
           />

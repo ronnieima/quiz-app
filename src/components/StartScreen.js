@@ -1,9 +1,20 @@
-function StartScreen({ numQuestions, dispatch, quizTopic }) {
+function StartScreen({ questions, questionAmount, dispatch, quizTopic }) {
   return (
     <div className="start">
       <h2>Welcome to the {quizTopic} Quiz!</h2>
       <h3>
-        {numQuestions} questions to test your {quizTopic} mastery
+        <select
+          onChange={(e) =>
+            dispatch({ type: "updateQuestionAmount", payload: e.target.value })
+          }
+          value={questionAmount}
+        >
+          {questions.map((_, index) => (
+            <option value={`${index + 1}`}>{index + 1}</option>
+          ))}
+        </select>{" "}
+        {questionAmount === 1 ? "question" : "questions"} to test your{" "}
+        {quizTopic} mastery 🧙‍♂️
       </h3>
       <button
         className="btn btn-ui"
