@@ -23,6 +23,7 @@ const initialState = {
   points: 0,
   highscore: 0,
   secondsRemaining: null,
+  quizTopic: "React",
 };
 
 function reducer(state, action) {
@@ -90,6 +91,11 @@ function reducer(state, action) {
         ...state,
         index: action.payload + 1,
       };
+    case "changeTopic":
+      return {
+        ...state,
+        quizTopic: action.payload,
+      };
     default:
       throw new Error("Action unknown");
   }
@@ -97,7 +103,16 @@ function reducer(state, action) {
 
 export default function App() {
   const [
-    { questions, status, index, answer, points, highscore, secondsRemaining },
+    {
+      questions,
+      status,
+      index,
+      answer,
+      points,
+      highscore,
+      secondsRemaining,
+      quizTopic,
+    },
     dispatch,
   ] = useReducer(reducer, initialState);
 
@@ -107,7 +122,7 @@ export default function App() {
   }, 0);
 
   useEffect(function () {
-    fetch("http://localhost:9000/questions")
+    fetch(`http://localhost:9000/questions`)
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
@@ -115,13 +130,17 @@ export default function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header dispatch={dispatch} quizTopic={quizTopic} status={status} />
 
       <Main>
         {status === "loading" && <Loader />}
         {status === "error" && <Error />}
         {status === "ready" && (
-          <StartScreen numQuestions={numQuestions} dispatch={dispatch} />
+          <StartScreen
+            numQuestions={numQuestions}
+            dispatch={dispatch}
+            quizTopic={quizTopic}
+          />
         )}
         {status === "active" && (
           <>
