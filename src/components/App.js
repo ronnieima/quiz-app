@@ -11,7 +11,7 @@ import Footer from "./Footer";
 import Timer from "./Timer";
 import QuitButton from "./QuitButton";
 
-const SECONDS_PER_QUESTION = 30;
+const SECONDS_PER_QUESTION = 20;
 
 const initialState = {
   questions: [],
