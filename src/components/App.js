@@ -121,12 +121,15 @@ export default function App() {
     return total + question.points;
   }, 0);
 
-  useEffect(function () {
-    fetch(`http://localhost:9000/questions`)
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
-  }, []);
+  useEffect(
+    function () {
+      fetch(`http://localhost:9000/${quizTopic.toLowerCase()}`)
+        .then((res) => res.json())
+        .then((data) => dispatch({ type: "dataReceived", payload: data }))
+        .catch((err) => dispatch({ type: "dataFailed" }));
+    },
+    [quizTopic]
+  );
 
   return (
     <div className="app">

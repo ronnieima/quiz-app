@@ -41,11 +41,12 @@ body {
 }
 
 .app-header {
-  width: 80rem;
+  width: 90rem;
   margin-bottom: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 3rem;
 }
 
 .error {
@@ -73,6 +74,7 @@ h1,
   font-weight: 900;
   border-radius: 30px;
   width: auto;
+  padding: 2rem;
 }
 
 h2 {

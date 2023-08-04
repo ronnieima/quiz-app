@@ -1,7 +1,7 @@
 function Header({ dispatch, quizTopic, status }) {
   return (
     <header className="app-header">
-      <img src="logo512.png" alt="React logo" />
+      <img src={`./logo/${quizTopic}.png`} alt={`${quizTopic} logo`} />
       <h1>
         The{" "}
         {status === "ready" && (

@@ -1,5 +1,5 @@
 {
-  "questions": [
+  "react": [
     {
       "question": "Which is the most popular JavaScript framework?",
       "options": ["Angular", "React", "Svelte", "Vue"],
@@ -133,6 +133,920 @@
         "Each time the component is re-rendered"
       ],
       "correctOption": 3,
+      "points": 20
+    }
+  ],
+  "javascript": [
+    {
+      "question": "Which is the most popular JavaScript framework?",
+      "options": ["Angular", "React", "Svelte", "Vue"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the correct way to define a JavaScript variable?",
+      "options": [
+        "var name = 'John'",
+        "variable name = 'John'",
+        "v name = 'John'",
+        "var: name = 'John'"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which method can be used to parse a JSON string?",
+      "options": [
+        "JSON.stringify()",
+        "JSON.parse()",
+        "JSON.load()",
+        "JSON.from()"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What will 'typeof null' return?",
+      "options": ["'null'", "'undefined'", "'object'", "'NaN'"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which one is not a reserved word in JavaScript?",
+      "options": ["interface", "throws", "program", "short"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What is the result of '2' + 2?",
+      "options": ["4", "'22'", "Error", "'4'"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which function is used to print text on the screen?",
+      "options": ["alert()", "console.log()", "print()", "display()"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which method removes the last element from an array?",
+      "options": ["push()", "pop()", "last()", "remove()"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which operator is used for strict equality?",
+      "options": ["==", "===", "!=", "!=="],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the correct syntax for referring to an external script called 'app.js'?",
+      "options": [
+        "<script href='app.js'>",
+        "<script src='app.js'></script>",
+        "<script ref='app.js'></script>",
+        "<script name='app.js'></script>"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which of the following is not a primitive data type in JavaScript?",
+      "options": ["boolean", "object", "number", "string"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How to write an IF statement in JavaScript?",
+      "options": ["if i = 5 then", "if i = 5", "if (i == 5)", "if i == 5 then"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What will 'null == undefined' return?",
+      "options": ["true", "false", "ReferenceError", "TypeError"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which global function can be used to convert a string to an integer?",
+      "options": ["parseFloat()", "toInteger()", "parseNumber()", "parseInt()"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "What is a closure in JavaScript?",
+      "options": [
+        "A class that’s closed for modification",
+        "An error in the code",
+        "A function with preserved variables",
+        "A loop that never ends"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which method returns a new string with some or all matches of a pattern?",
+      "options": ["concat()", "match()", "search()", "replace()"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "How can you add a comment in JavaScript?",
+      "options": [
+        "// comment",
+        "<!-- comment -->",
+        "/* comment */",
+        "All of the above"
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which is the correct JavaScript syntax to change the content of the HTML element with id 'example'?",
+      "options": [
+        "document.getElementByName('example').innerHTML = 'New Text'",
+        "document.getElementById('example').innerHTML = 'New Text'",
+        "#example.innerHTML = 'New Text'",
+        "document.id('example') = 'New Text'"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What will '0 == false' return?",
+      "options": ["true", "false", "TypeError", "ReferenceError"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which one is a JavaScript package manager?",
+      "options": ["TypeScript", "npm", "Laravel", "Django"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which of the following code creates an object?",
+      "options": [
+        "var obj = new Object();",
+        "var obj = Object();",
+        "var obj = {};",
+        "All of the above"
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which event is fired whenever a control loses focus?",
+      "options": ["onfocusout", "onblur", "onlosefocus", "onfocus"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What does 'this' keyword refer to in JavaScript?",
+      "options": [
+        "Current object",
+        "Last object",
+        "First object",
+        "None of the above"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which one is not an ECMAScript 6 feature?",
+      "options": [
+        "Promises",
+        "Arrow Functions",
+        "Multithreading",
+        "Template Literals"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What does the 'use strict' do in JavaScript?",
+      "options": [
+        "It makes debugging easier",
+        "It catches common coding mistakes",
+        "It prevents the use of global variables",
+        "All of the above"
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which method can be used to find the length of a string?",
+      "options": ["size()", "length()", "getSize()", "None of the above"],
+      "correctOption": 1,
+      "points": 10
+    }
+  ],
+  "css": [
+    {
+      "question": "What does CSS stand for?",
+      "options": [
+        "Creative Style Sheet",
+        "Cascading Style Sheet",
+        "Computer Style Sheet",
+        "Colorful Style Sheet"
+      ],
+      "correctOption": 1,
+      "points": 5
+    },
+    {
+      "question": "Which property is used to change the text color of an element?",
+      "options": ["text-color", "fgcolor", "color", "font-color"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "How do you make the text bold in CSS?",
+      "options": [
+        "font-style:bold;",
+        "font:bold;",
+        "font-weight:bold;",
+        "text:bold;"
+      ],
+      "correctOption": 2,
+      "points": 15
+    },
+    {
+      "question": "Which CSS property controls the text alignment?",
+      "options": ["text-align", "font-align", "text-place", "alignment"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How can you make a list that lists its items with squares?",
+      "options": [
+        "list-type: square;",
+        "list: square;",
+        "list-style-type: square;",
+        "list: type square;"
+      ],
+      "correctOption": 2,
+      "points": 15
+    },
+    {
+      "question": "How do you add a background color in CSS?",
+      "options": ["bg-color", "color", "background", "background-color"],
+      "correctOption": 3,
+      "points": 5
+    },
+    {
+      "question": "Which property is used to set the space between characters of text?",
+      "options": [
+        "letter-spacing",
+        "character-spacing",
+        "text-spacing",
+        "space-spacing"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Which value of 'display' property will hide an element?",
+      "options": ["hidden", "none", "hide", "invisible"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the correct way to create a transition effect for all properties, lasting 2 seconds?",
+      "options": [
+        "transition: all 2 seconds;",
+        "transition: all 2s;",
+        "transition-all: 2s;",
+        "transition: 2s all;"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which property allows you to create a rounded border?",
+      "options": [
+        "border-corner-radius",
+        "border-round",
+        "border-radius",
+        "border-curve"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which is the correct CSS syntax?",
+      "options": [
+        "body {color: black}",
+        "body:color=black;",
+        "{body;color:black;}",
+        "body:color black;"
+      ],
+      "correctOption": 0,
+      "points": 5
+    },
+    {
+      "question": "How do you insert a comment in CSS?",
+      "options": [
+        "// comment",
+        "/* comment */",
+        "<!-- comment -->",
+        "-- comment --"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which CSS property is used to control the text size?",
+      "options": ["font-style", "text-size", "font-size", "text-style"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What does 'em' unit stand for?",
+      "options": [
+        "Exact measurement",
+        "Element measurement",
+        "Relative to parent element's font size",
+        "Emphasized measurement"
+      ],
+      "correctOption": 2,
+      "points": 15
+    },
+    {
+      "question": "Which property is used to control the space between the text in a word?",
+      "options": ["letter-spacing", "word-spacing", "spacing", "text-spacing"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "How do you set the left margin of an element to 20 pixels?",
+      "options": [
+        "margin-left: 20px",
+        "marginleft = 20px",
+        "margin: left 20px",
+        "margin left:20px"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which CSS pseudo-class targets only the first element?",
+      "options": [":first-child", ":first-of-type", ":first", ":first-element"],
+      "correctOption": 0,
+      "points": 15
+    },
+    {
+      "question": "Which property is used to set the line height?",
+      "options": ["line-spacing", "line-height", "line-space", "line-range"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How do you select elements with class name 'sample'?",
+      "options": [".sample", "#sample", "sample", "&sample"],
+      "correctOption": 0,
+      "points": 5
+    },
+    {
+      "question": "What is the property used to set the class's text color?",
+      "options": ["text-color", "font-color", "color", "text"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "How do you define the space between content and border?",
+      "options": ["spacing", "margin", "padding", "border-spacing"],
+      "correctOption": 2,
+      "points": 15
+    },
+    {
+      "question": "What is the correct way to apply a background image?",
+      "options": [
+        "background: url('image.jpg')",
+        "background-image: 'image.jpg'",
+        "background: 'image.jpg'",
+        "image: url('image.jpg')"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which property changes the position of the background image?",
+      "options": [
+        "background-position",
+        "background-place",
+        "background-coord",
+        "background"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "How do you set a max-width of 100% in CSS?",
+      "options": [
+        "max-width: 100%",
+        "maxwidth = 100%",
+        "maxwidth: 100%",
+        "max-width: 100"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How can you clear floated elements?",
+      "options": [
+        "clear: none;",
+        "clear: float;",
+        "clear: both;",
+        "clear: all;"
+      ],
+      "correctOption": 2,
+      "points": 15
+    },
+    {
+      "question": "Which value of 'overflow' property will cause the excess content to be hidden?",
+      "options": ["hidden", "scroll", "clip", "hide"],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Which property can be used to set the space outside elements?",
+      "options": ["spacing", "padding", "margin", "outside"],
+      "correctOption": 2,
+      "points": 5
+    },
+    {
+      "question": "What is the default value of the 'z-index' property?",
+      "options": ["0", "1", "auto", "100"],
+      "correctOption": 2,
+      "points": 15
+    }
+  ],
+  "html": [
+    {
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyperlinks and Text Markup Language",
+        "Hyper Text Markup Language",
+        "Home Tool Markup Language",
+        "Hyper Tool Markup Language"
+      ],
+      "correctOption": 1,
+      "points": 5
+    },
+    {
+      "question": "Which HTML tag is used to define a hyperlink?",
+      "options": ["<link>", "<a>", "<hlink>", "<hyperlink>"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How can you open a link in a new browser tab?",
+      "options": [
+        "<a href='url' new>",
+        "<a href='url' target='_blank'>",
+        "<a href='url' tab='open'>",
+        "<a href='url' open>"
+      ],
+      "correctOption": 1,
+      "points": 15
+    },
+    {
+      "question": "Which tag is used to create a numbered list?",
+      "options": ["<ul>", "<ol>", "<li>", "<dl>"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How do you create a comment in HTML?",
+      "options": [
+        "<!-- comment -->",
+        "// comment",
+        "/* comment */",
+        "-- comment --"
+      ],
+      "correctOption": 0,
+      "points": 5
+    },
+    {
+      "question": "What is the correct HTML for inserting an image?",
+      "options": [
+        "<img src='image.jpg'>",
+        "<img>image.jpg</img>",
+        "<image src='image.jpg'/>",
+        "<img href='image.jpg'/>"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which HTML attribute is used to define inline styles?",
+      "options": ["font", "style", "class", "styles"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which HTML element is used to define a client-side script?",
+      "options": ["<script>", "<client>", "<javascript>", "<app>"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How do you create a checkbox input element?",
+      "options": [
+        "<input type='check'>",
+        "<input type='checkbox'>",
+        "<check>",
+        "<checkbox>"
+      ],
+      "correctOption": 1,
+      "points": 15
+    },
+    {
+      "question": "Which HTML tag is used to define a header in a document?",
+      "options": ["<head>", "<header>", "<top>", "<heading>"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How can you create an ordered list with letters instead of numbers?",
+      "options": [
+        "<ol type='A'>",
+        "<ol style='letters'>",
+        "<ol type='alpha'>",
+        "<ol list='A'>"
+      ],
+      "correctOption": 0,
+      "points": 15
+    },
+    {
+      "question": "What is the correct way to add a background color in HTML?",
+      "options": [
+        "<background color='yellow'>",
+        "<body style='background-color:yellow;'>",
+        "<body bg='yellow'>",
+        "<background='yellow'>"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
+      "options": ["src", "alt", "title", "name"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What does the 'DOCTYPE' declaration define?",
+      "options": [
+        "Document title",
+        "Document type",
+        "Document language",
+        "Document script"
+      ],
+      "correctOption": 1,
+      "points": 15
+    },
+    {
+      "question": "Which tag is used to create a drop-down selection list?",
+      "options": ["<select>", "<list>", "<dropdown>", "<option>"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which tag is used to embed content from another web page?",
+      "options": ["<embed>", "<iframe>", "<import>", "<object>"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which tag represents the main content of a document?",
+      "options": ["<body>", "<content>", "<main>", "<primary>"],
+      "correctOption": 2,
+      "points": 15
+    },
+    {
+      "question": "Which HTML element is used to define important text?",
+      "options": ["<i>", "<strong>", "<b>", "<em>"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the correct HTML for adding a background color?",
+      "options": [
+        "<body style='background-color:yellow;'>",
+        "<background>yellow</background>",
+        "<body bg='yellow'>",
+        "<body background='yellow'>"
+      ],
+      "correctOption": 0,
+      "points": 5
+    },
+    {
+      "question": "What is the correct HTML for making a text area?",
+      "options": [
+        "<textarea>",
+        "<input type='textbox'>",
+        "<text>...</text>",
+        "<input type='textarea'>"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which HTML element defines a table header?",
+      "options": ["<th>", "<thead>", "<h>", "<header>"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which attribute is used to define the number of rows in a text area?",
+      "options": ["rows", "length", "rownum", "lines"],
+      "correctOption": 0,
+      "points": 15
+    },
+    {
+      "question": "What is the correct way to comment out multiple lines in HTML?",
+      "options": [
+        "<!--This comment has two lines-->",
+        "//This comment has two lines//",
+        "/*This comment has two lines*/",
+        "--This comment has two lines--"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which HTML attribute is used to specify the URL of the linked resource?",
+      "options": ["url", "link", "src", "href"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which HTML element defines navigation links?",
+      "options": ["<nav>", "<navigation>", "<links>", "<menu>"],
+      "correctOption": 0,
+      "points": 15
+    },
+    {
+      "question": "What is the correct HTML tag to make a text italic?",
+      "options": ["<italics>", "<italic>", "<i>", "<em>"],
+      "correctOption": 2,
+      "points": 5
+    },
+    {
+      "question": "Which of these elements are all <table> elements?",
+      "options": [
+        "<thead><body><tr>",
+        "<table><thead><tr>",
+        "<table><tr><td>",
+        "<thead><tr><td>"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Which tag is used to define a list item?",
+      "options": ["<li>", "<item>", "<list>", "<i>"],
+      "correctOption": 0,
+      "points": 5
+    }
+  ],
+  "guam": [
+    {
+      "question": "What is the capital of Guam?",
+      "options": ["Tumon", "Tamuning", "Hagåtña", "Mangilao"],
+      "correctOption": 2,
+      "points": 5
+    },
+    {
+      "question": "What is the native language of Guam?",
+      "options": ["Tagalog", "English", "Spanish", "Chamorro"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which ocean surrounds Guam?",
+      "options": [
+        "Pacific Ocean",
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean"
+      ],
+      "correctOption": 0,
+      "points": 5
+    },
+    {
+      "question": "What is Guam's political status?",
+      "options": [
+        "Independent Country",
+        "U.S. State",
+        "U.S. Territory",
+        "Commonwealth"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What is the currency used in Guam?",
+      "options": ["Guam Dollar", "U.S. Dollar", "Pacific Franc", "Peso"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is a traditional Chamorro open-air hut called?",
+      "options": ["Fale", "Nipa", "Bure", "Latte"],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "Which major war had a significant impact on Guam?",
+      "options": ["World War I", "World War II", "Vietnam War", "Korean War"],
+      "correctOption": 1,
+      "points": 15
+    },
+    {
+      "question": "What is Guam's primary economic activity?",
+      "options": ["Mining", "Agriculture", "Tourism", "Manufacturing"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What is the highest point on Guam?",
+      "options": [
+        "Mount Lamlam",
+        "Mount Jumullong",
+        "Mount Bolanos",
+        "Mount Schroeder"
+      ],
+      "correctOption": 0,
+      "points": 15
+    },
+    {
+      "question": "What famous dish is considered Guam's national dish?",
+      "options": ["Adobo", "Kelaguen", "Sisig", "Poke"],
+      "correctOption": 1,
+      "points": 15
+    },
+    {
+      "question": "In what year did the U.S. acquire Guam?",
+      "options": ["1898", "1918", "1868", "1908"],
+      "correctOption": 0,
+      "points": 15
+    },
+    {
+      "question": "What type of government does Guam have?",
+      "options": ["Monarchy", "Democracy", "Communist", "Federal Republic"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the approximate population of Guam?",
+      "options": ["50,000", "170,000", "350,000", "1 million"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the main religion in Guam?",
+      "options": ["Buddhism", "Protestantism", "Catholicism", "Islam"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What's the approximate distance between Guam and the mainland United States?",
+      "options": ["3,000 miles", "5,000 miles", "8,000 miles", "1,500 miles"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Which of the following countries is NOT close to Guam?",
+      "options": ["Japan", "Philippines", "Australia", "Brazil"],
+      "correctOption": 3,
+      "points": 15
+    },
+    {
+      "question": "What is the time zone of Guam?",
+      "options": ["GMT+10", "GMT+8", "GMT-10", "GMT-8"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the nickname for Guam?",
+      "options": [
+        "Emerald Isle",
+        "Island Paradise",
+        "Gem of the Ocean",
+        "Guam the Great"
+      ],
+      "correctOption": 0,
+      "points": 15
+    },
+    {
+      "question": "What's the size of Guam in square miles?",
+      "options": ["210", "350", "540", "100"],
+      "correctOption": 0,
+      "points": 15
+    },
+    {
+      "question": "Who was the first European explorer to discover Guam?",
+      "options": [
+        "Christopher Columbus",
+        "James Cook",
+        "Vasco da Gama",
+        "Ferdinand Magellan"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "What's the official bird of Guam?",
+      "options": ["Bald Eagle", "Kingfisher", "Guam Rail", "Guam Kingfisher"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is a major celebration in Guam called Liberation Day?",
+      "options": [
+        "End of World War II",
+        "Independence from Spain",
+        "Discovery by Magellan",
+        "End of the Vietnam War"
+      ],
+      "correctOption": 0,
+      "points": 15
+    },
+    {
+      "question": "What's the primary military installation on Guam?",
+      "options": [
+        "Naval Base Guam",
+        "Anderson Air Force Base",
+        "Fort Guam",
+        "Marine Corps Base Guam"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What body of water separates Guam from the Northern Mariana Islands?",
+      "options": [
+        "Mariana Trench",
+        "Rota Channel",
+        "Saipan Strait",
+        "Pacific Channel"
+      ],
+      "correctOption": 1,
+      "points": 15
+    },
+    {
+      "question": "Which of the following is a popular beach in Guam?",
+      "options": ["White Beach", "Tumon Beach", "Guam Beach", "Paradise Beach"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What type of climate does Guam have?",
+      "options": [
+        "Mediterranean",
+        "Desert",
+        "Tropical Rainforest",
+        "Subarctic"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What is the main educational institution in Guam?",
+      "options": [
+        "Guam State University",
+        "University of Guam",
+        "Pacific College",
+        "Guam Technical Institute"
+      ],
+      "correctOption": 1,
+      "points": 15
+    },
+    {
+      "question": "Which natural disaster is common in Guam?",
+      "options": [
+        "Earthquakes",
+        "Tornadoes",
+        "Hurricanes",
+        "Volcanic eruptions"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Which U.S. President ordered the recapture of Guam during World War II?",
+      "options": [
+        "Franklin D. Roosevelt",
+        "Harry S. Truman",
+        "Dwight D. Eisenhower",
+        "John F. Kennedy"
+      ],
+      "correctOption": 0,
       "points": 20
     }
   ]
