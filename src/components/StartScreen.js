@@ -1,7 +1,7 @@
 function StartScreen({ questions, questionAmount, dispatch, quizTopic }) {
   return (
     <div className="start">
-      <h2>Welcome to the {quizTopic} Quiz!</h2>
+      <h2>Ready to test your {quizTopic} knowledge? </h2>
       <h3>
         <select
           onChange={(e) =>

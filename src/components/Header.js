@@ -18,7 +18,7 @@ function Header({ dispatch, quizTopic, status }) {
             <option value="Guam">Guam</option>
           </select>
         )}
-        {status === "active" && quizTopic} Quiz
+        {status === "active" || (status === "finished" && quizTopic)} Quiz
       </h1>
     </header>
   );
