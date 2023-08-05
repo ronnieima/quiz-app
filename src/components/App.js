@@ -145,6 +145,13 @@ export default function App() {
     [quizTopic]
   );
 
+  useEffect(
+    function () {
+      document.title = `The ${quizTopic} Quiz`;
+    },
+    [quizTopic]
+  );
+
   return (
     <div className="app">
       <Header dispatch={dispatch} quizTopic={quizTopic} status={status} />
