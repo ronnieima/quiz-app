@@ -1,7 +1,7 @@
 function QuitButton({ dispatch }) {
   return (
     <button
-      className="btn btn-cancel"
+      className="btn btn-quit"
       onClick={() => dispatch({ type: "restart" })}
     >
       Quit

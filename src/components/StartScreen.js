@@ -10,11 +10,13 @@ function StartScreen({ questions, questionAmount, dispatch, quizTopic }) {
           value={questionAmount}
         >
           {questions.map((_, index) => (
-            <option value={`${index + 1}`}>{index + 1}</option>
+            <option value={`${index + 1}`} key={index + 1}>
+              {index + 1}
+            </option>
           ))}
         </select>{" "}
-        {questionAmount === 1 ? "question" : "questions"} to test your{" "}
-        {quizTopic} mastery 🧙‍♂️
+        randomized {questionAmount === 1 ? "question" : "questions"} to test
+        your {quizTopic} mastery 🧙‍♂️
       </h3>
       <button
         className="btn btn-ui"
