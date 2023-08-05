@@ -153,6 +153,13 @@ export default function App() {
     [quizTopic]
   );
 
+  useEffect(
+    function () {
+      document.title = `The ${quizTopic} Quiz`;
+    },
+    [quizTopic]
+  );
+
   return (
     <div className="app">
       {modalIsOpen && <Modal dispatch={dispatch} />}

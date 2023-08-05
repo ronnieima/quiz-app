@@ -67,6 +67,7 @@ h1,
   font-family: "Codystar";
   font-size: 5.6rem;
   color: white;
+  text-align: center;
 }
 
 .app-header select {
@@ -108,6 +109,10 @@ h4 {
   border-radius: 10px;
 }
 
+.start h3 {
+  text-align: center;
+}
+
 .progress {
   margin-bottom: 4rem;
   display: grid;
@@ -120,6 +125,7 @@ h4 {
 
 progress {
   -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 12px;
   grid-column: 1 / -1;
@@ -170,8 +176,13 @@ progress {
   margin-bottom: 3.2rem;
 }
 
-.btn-cancel {
+.btn-quit {
   width: 40%;
+  background-color: #673c3d;
+}
+
+.btn-quit:not([disabled]):hover {
+  background-color: #442828;
 }
 
 .btn-navigate {
