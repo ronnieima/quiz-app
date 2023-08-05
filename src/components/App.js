@@ -10,6 +10,7 @@ import Finished from "./Finished";
 import Footer from "./Footer";
 import Timer from "./Timer";
 import QuitButton from "./QuitButton";
+import Modal from "./Modal";
 
 const SECONDS_PER_QUESTION = 20;
 
@@ -26,6 +27,7 @@ const initialState = {
   questionAmount: null,
   quizTopic: "React",
   activeQuestions: [],
+  modalIsOpen: false,
 };
 
 function reducer(state, action) {
@@ -107,6 +109,11 @@ function reducer(state, action) {
         ...state,
         questionAmount: Number(action.payload),
       };
+    case "toggleModal":
+      return {
+        ...state,
+        modalIsOpen: !state.modalIsOpen,
+      };
     default:
       throw new Error("Action unknown");
   }
@@ -125,6 +132,7 @@ export default function App() {
       quizTopic,
       questionAmount,
       activeQuestions,
+      modalIsOpen,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
@@ -147,6 +155,7 @@ export default function App() {
 
   return (
     <div className="app">
+      {modalIsOpen && <Modal dispatch={dispatch} />}
       <Header dispatch={dispatch} quizTopic={quizTopic} status={status} />
 
       <Main>
