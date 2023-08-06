@@ -1,4 +1,4 @@
-function Options({ question, dispatch, answer, index, hasAnswered }) {
+function Options({ question, dispatch, answer, hasAnswered, selectedAnswer }) {
   return (
     <div className="options">
       {question.options.map((option, index) => (
@@ -10,7 +10,14 @@ function Options({ question, dispatch, answer, index, hasAnswered }) {
                 ? "correct"
                 : "wrong"
               : ""
-          }`}
+          }
+        ${
+          hasAnswered
+            ? selectedAnswer === index
+              ? "selected-answer"
+              : "faded"
+            : ""
+        }`}
           disabled={hasAnswered}
           key={option}
           onClick={() => dispatch({ type: "newAnswer", payload: index })}

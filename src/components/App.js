@@ -28,6 +28,7 @@ const initialState = {
   quizTopic: "React",
   activeQuestions: [],
   modalIsOpen: false,
+  selectedAnswer: null,
 };
 
 function reducer(state, action) {
@@ -61,6 +62,7 @@ function reducer(state, action) {
           action.payload === question.correctOption
             ? state.points + question.points
             : state.points,
+        selectedAnswer: action.payload,
       };
     case "nextQuestion":
       return {
@@ -93,11 +95,16 @@ function reducer(state, action) {
       return {
         ...state,
         index: action.payload - 1,
+        selectedAnswer: state.answer[action.payload - 1],
       };
     case "navigateRight":
       return {
         ...state,
         index: action.payload + 1,
+        selectedAnswer:
+          state.answer[action.payload + 1] != null
+            ? state.answer[action.payload + 1]
+            : null,
       };
     case "changeTopic":
       return {
@@ -133,6 +140,7 @@ export default function App() {
       questionAmount,
       activeQuestions,
       modalIsOpen,
+      selectedAnswer,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
@@ -191,6 +199,7 @@ export default function App() {
               answer={answer}
               index={index}
               numQuestions={numQuestions}
+              selectedAnswer={selectedAnswer}
             />
             <Footer>
               <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
