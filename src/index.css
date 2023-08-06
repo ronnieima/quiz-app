@@ -191,14 +191,19 @@ progress {
   border: 2px solid var(--color-theme);
   color: var(--color-light);
 }
+
 .btn-option.wrong {
   background-color: var(--color-accent);
   border: 2px solid var(--color-accent);
   color: var(--color-darkest);
 }
 
-.answer {
+.answer,
+.selected-answer {
   transform: translateX(2rem);
+}
+.btn-option.faded {
+  opacity: 0.3;
 }
 
 .result {

@@ -2,7 +2,14 @@ import NextButton from "./NextButton";
 import Options from "./Options";
 import PrevButton from "./PrevButton";
 
-function Question({ question, dispatch, answer, index, numQuestions }) {
+function Question({
+  question,
+  dispatch,
+  answer,
+  index,
+  numQuestions,
+  selectedAnswer,
+}) {
   const hasAnswered = answer.length > index;
   return (
     <div className="question">
@@ -21,6 +28,7 @@ function Question({ question, dispatch, answer, index, numQuestions }) {
           answer={answer}
           index={index}
           hasAnswered={hasAnswered}
+          selectedAnswer={selectedAnswer}
         />
       </main>
       <NextButton
