@@ -38,16 +38,16 @@ function reducer(state, action) {
         ...state,
         status: "active",
         activeQuestions: state.questions.slice(0, state.questionAmount),
-        secondsRemaining: state.questions.length * SECONDS_PER_QUESTION,
+        secondsRemaining: state.questionAmount * SECONDS_PER_QUESTION,
       };
     case "newAnswer":
-      const question = state.questions.at(state.index);
+      //   const question = state.questions.at(state.index);
       return {
         ...state,
         answer: [...state.answer, action.payload],
         points:
-          action.payload === question.correctOption
-            ? state.points + question.points
+          action.payload === state.questions.at(state.index).correctOption
+            ? state.points + state.questions.at(state.index).points
             : state.points,
         selectedAnswer: action.payload,
       };
@@ -137,6 +137,7 @@ function QuizProvider({ children }) {
     return total + question.points;
   }, 0);
   const currentQuestion = questions.at(index);
+  const hasAnswered = answer.length > index;
 
   useEffect(
     function () {
@@ -174,6 +175,7 @@ function QuizProvider({ children }) {
         numQuestions,
         maxPossiblePoints,
         currentQuestion,
+        hasAnswered,
         dispatch,
       }}
     >

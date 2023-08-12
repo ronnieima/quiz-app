@@ -1,4 +1,7 @@
-function Header({ dispatch, quizTopic, status }) {
+import { useQuiz } from "../contexts/QuizContext";
+
+function Header() {
+  const { dispatch, quizTopic, status } = useQuiz();
   return (
     <header className="app-header">
       <img src={`./logo/${quizTopic}.png`} alt={`${quizTopic} logo`} />

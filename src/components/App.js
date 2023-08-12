@@ -1,4 +1,3 @@
-import { useEffect, useReducer } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Loader from "./Loader";
@@ -14,72 +13,28 @@ import Modal from "./Modal";
 import { useQuiz } from "../contexts/QuizContext";
 
 export default function App() {
-  const {
-    questions,
-    status,
-    index,
-    answer,
-    points,
-    highscore,
-    secondsRemaining,
-    quizTopic,
-    questionAmount,
-    activeQuestions,
-    modalIsOpen,
-    selectedAnswer,
-    numQuestions,
-    maxPossiblePoints,
-    currentQuestion,
-    dispatch,
-  } = useQuiz();
+  const { status, modalIsOpen } = useQuiz();
 
   return (
     <div className="app">
-      {modalIsOpen && <Modal dispatch={dispatch} />}
-      <Header dispatch={dispatch} quizTopic={quizTopic} status={status} />
+      {modalIsOpen && <Modal />}
+      <Header />
 
       <Main>
         {status === "loading" && <Loader />}
         {status === "error" && <Error />}
-        {status === "ready" && (
-          <StartScreen
-            questionAmount={questionAmount}
-            questions={questions}
-            dispatch={dispatch}
-            quizTopic={quizTopic}
-          />
-        )}
+        {status === "ready" && <StartScreen />}
         {status === "active" && (
           <>
-            <Progress
-              index={index}
-              numQuestions={numQuestions}
-              points={points}
-              maxPossiblePoints={maxPossiblePoints}
-              answer={answer}
-            />
-            <Question
-              question={currentQuestion}
-              dispatch={dispatch}
-              answer={answer}
-              index={index}
-              numQuestions={numQuestions}
-              selectedAnswer={selectedAnswer}
-            />
+            <Progress />
+            <Question />
             <Footer>
-              <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
-              <QuitButton dispatch={dispatch} />
+              <Timer />
+              <QuitButton />
             </Footer>
           </>
         )}
-        {status === "finished" && (
-          <Finished
-            dispatch={dispatch}
-            highscore={highscore}
-            points={points}
-            maxPossiblePoints={maxPossiblePoints}
-          />
-        )}
+        {status === "finished" && <Finished />}
       </Main>
     </div>
   );

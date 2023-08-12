@@ -1,4 +1,7 @@
-function Modal({ dispatch }) {
+import { useQuiz } from "../contexts/QuizContext";
+
+function Modal() {
+  const { dispatch } = useQuiz();
   return (
     <div className="modal-container">
       <section className="modal">
