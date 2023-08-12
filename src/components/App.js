@@ -54,7 +54,6 @@ function reducer(state, action) {
       };
     case "newAnswer":
       const question = state.questions.at(state.index);
-
       return {
         ...state,
         answer: [...state.answer, action.payload],
@@ -149,6 +148,7 @@ export default function App() {
   const maxPossiblePoints = activeQuestions.reduce((total, question) => {
     return total + question.points;
   }, 0);
+  const currentQuestion = questions.at(index);
 
   useEffect(
     function () {
@@ -194,7 +194,7 @@ export default function App() {
               answer={answer}
             />
             <Question
-              question={questions[index]}
+              question={currentQuestion}
               dispatch={dispatch}
               answer={answer}
               index={index}
@@ -204,12 +204,6 @@ export default function App() {
             <Footer>
               <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
               <QuitButton dispatch={dispatch} />
-              {/* <NextButton
-                dispatch={dispatch}
-                answer={answer}
-                index={index}
-                numQuestions={numQuestions}
-              /> */}
             </Footer>
           </>
         )}
