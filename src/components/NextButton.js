@@ -1,4 +1,7 @@
-function NextButton({ dispatch, hasAnswered, index, numQuestions }) {
+import { useQuiz } from "../contexts/QuizContext";
+
+function NextButton() {
+  const { dispatch, hasAnswered, index, numQuestions } = useQuiz();
   return (
     <button
       disabled={!hasAnswered}

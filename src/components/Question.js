@@ -1,44 +1,19 @@
+import { useQuiz } from "../contexts/QuizContext";
 import NextButton from "./NextButton";
 import Options from "./Options";
 import PrevButton from "./PrevButton";
 
-function Question({
-  question,
-  dispatch,
-  answer,
-  index,
-  numQuestions,
-  selectedAnswer,
-}) {
-  const hasAnswered = answer.length > index;
+function Question() {
+  const { currentQuestion } = useQuiz();
+
   return (
     <div className="question">
-      <PrevButton
-        question={question}
-        dispatch={dispatch}
-        answer={answer}
-        index={index}
-        hasAnswered={hasAnswered}
-      />
+      <PrevButton />
       <main>
-        <h4>{question.question}</h4>
-        <Options
-          question={question}
-          dispatch={dispatch}
-          answer={answer}
-          index={index}
-          hasAnswered={hasAnswered}
-          selectedAnswer={selectedAnswer}
-        />
+        <h4>{currentQuestion.question}</h4>
+        <Options />
       </main>
-      <NextButton
-        question={question}
-        dispatch={dispatch}
-        answer={answer}
-        index={index}
-        hasAnswered={hasAnswered}
-        numQuestions={numQuestions}
-      />
+      <NextButton />
     </div>
   );
 }

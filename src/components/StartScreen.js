@@ -1,4 +1,7 @@
-function StartScreen({ questions, questionAmount, dispatch, quizTopic }) {
+import { useQuiz } from "../contexts/QuizContext";
+
+function StartScreen() {
+  const { questions, questionAmount, dispatch, quizTopic } = useQuiz();
   return (
     <div className="start">
       <h2>Ready to test your {quizTopic} knowledge? </h2>
